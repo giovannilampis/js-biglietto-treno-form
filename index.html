@@ -15,42 +15,68 @@
 
   <div class="wrapper">
 
-    <div class="debug top-section-container text-black fs-3">
-      Ferrovia Panoramica: calcola il costo del biglietto
-    </div>
+      <div id="generate" class="py-4">
 
-    <div class="inner-border-bottom-radius">
-        <div class="todo-bottom-container">
-          
-          <form>
-            <div class="form-group">
-              <label for="birth-year" class="px-3 py-2">Anno di Nascita</label>
-              <input type="text" class="form-control" id="birth-year" aria-describedby="emailHelp" placeholder="anno">
-              <small id="emailHelp" class="form-text text-muted px-3">Non lo diremo a nessuno 😉.</small>
-            </div>
-            <div class="form-group">
-              <label for="kilometres" class="px-3 py-2">Lunghezza kilometrica del viaggio desiderato</label>
-              <input type="text" class="form-control" id="kilometres" placeholder="kilometri">
-            </div>
-            <button id="button-ticket" type="submit" class="btn button-ticket my-3 mx-2">Richiedi il biglietto</button>
-            
-        </form>
+        <div class="debug top-section-container text-black fs-3">
+          Ferrovia Panoramica: calcola il costo del biglietto
+        </div>
+    
+        <div class="inner-border-bottom-radius">
+            <div class="todo-bottom-container">
+              
+              <form id="my-form">
 
-        </div>    
-    </div>
+                <div class="form-group">
+                  <label for="birth-year" class="px-3 py-2">Anno di Nascita</label>
+                  <input type="text" class="form-control" id="birth-year" required aria-describedby="emailHelp" placeholder="anno">
+                </div>
 
-    <div class="debug top-section-container text-black fs-3">
-      Il tuo biglietto
-    </div>
-
-    <div class="inner-border-bottom-radius">
-        <div class="todo-bottom-container">
-
-          <!-- price of the ticket -->
-          <p class="py-3" id="responce">Prezzo del biglietto: €</p>
+                <div class="form-group">
+                  <label for="kilometres" class="px-3 py-2">Lunghezza kilometrica del viaggio desiderato</label>
+                  <input type="text" class="form-control" id="kilometres" placeholder="kilometri">
+                </div>
+    
+                <div class="row">
       
-        </div>    
-    </div>
+                  <div class="col-6">
+                    <label for="first-name" class="px-3 py-2">Nome</label>
+                    <input id="first-name" type="text" class="form-control" placeholder="Digita il tuo nome">
+                  </div>
+      
+                  <div class="col-6">
+                    <label for="last-name" class="px-3 py-2">Cognome</label>
+                    <input id="last-name" type="text" class="form-control" placeholder="Digita il tuo cognome">
+                  </div>
+      
+                </div>
+    
+                <button id="button-ticket" type="submit" class="btn button-ticket my-3 mx-2">Richiedi il biglietto</button>
+                <button id="operation-end" type="submit" class="btn button-ticket my-3 mx-2">Termina operazione</button>
+    
+                
+              </form>
+    
+            </div>    
+        </div>
+
+      </div>
+
+      <div id="ticket">
+
+        <div class="debug top-section-container text-black fs-3">
+          Il tuo biglietto
+        </div>
+    
+        <div class="inner-border-bottom-radius">
+            <div class="todo-bottom-container">
+    
+              <!-- price of the ticket -->
+              <p class="py-3" id="responce">Prezzo del biglietto: €</p>
+          
+            </div>    
+        </div>
+
+      </div>
 
   </div>
 

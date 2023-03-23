@@ -12,6 +12,11 @@ const kiloM = document.getElementById("kilometres");
 
 const buttonTicket = document.getElementById("button-ticket");
 
+// variable linked to the "End operation" button
+
+const endOperation = document.getElementById("operation-end");
+
+
 
 // ADD EVENT LISTENER
 buttonTicket.addEventListener("click", function() {
@@ -89,3 +94,18 @@ buttonTicket.addEventListener("click", function() {
     event.preventDefault();
 
 })
+
+// ADD EVENT AudioListener, aimed at concluding the transaction
+
+endOperation.addEventListener("click", function() {
+
+    // get the form element
+
+    let myForm = document.getElementById("my-form");
+
+    // reset the form
+
+    myForm.reset();
+
+})
+
