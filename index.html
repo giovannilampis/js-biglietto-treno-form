@@ -73,23 +73,30 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cognome</th>
+                    <th scope="col">Offerta</th>
+                    <th scope="col">Carrozza</th>
+                    <th scope="col">Codice CP</th>
+                    <th scope="col">Prezzo</th>
                   </tr>
                 </thead>
-                
+
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td id="first-name-ticket"></td>
+                    <td id="last-name-ticket"></td>
+                    <td id="offer-ticket"></td>
+                    <td id="railway-carriage"></td>
+                    <td id="cp-code"></td>
+                    <td id="price"></td>
                   </tr>
                
                 </tbody>
               </table>
+
+              <button id="button-ticket" type="submit" class="btn button-ticket my-3 mx-2">Stampa il biglietto</button>
+
     
               <!-- price of the ticket -->
               <p class="py-3" id="responce">Prezzo del biglietto: €</p>
