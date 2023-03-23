@@ -1,0 +1,49 @@
+/* color variables */
+
+:root {
+    --body-bg: #fef6e4;
+    --form-bg: #f3d2c1;
+    --headline: #001858;
+    --paragraph: #172c66;
+    --button: #8bd3dd;
+}
+
+/* utilities */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+/* general */
+
+body {
+    background-color: var(--body-bg);
+}
+
+form {
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--form-bg);
+    border: 1px solid var(--headline);
+    border-radius: 1rem;
+}
+
+h1 {
+    color: var(--button);
+    padding-top: 1rem;
+}
+
+p {
+    text-align: center;
+}
+
+.button-ticket {
+    background-color: var(--button);
+    color: var(--headline);
+}

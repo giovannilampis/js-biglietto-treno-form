@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- css style sheet link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>js-biglietto-treno</title>
+</head>
+
+<body>
+
+    <!-- FORM -->
+    <form class="my-3">
+        <div class="form-group">
+            <h1 class="text-center text-capitalize">Ferrovia panoramica</h1>
+          <label for="birth-year" class="px-3 py-2">Anno di Nascita</label>
+          <input type="text" class="form-control" id="birth-year" aria-describedby="emailHelp" placeholder="anno">
+          <small id="emailHelp" class="form-text text-muted px-3">Non lo diremo a nessuno 😉.</small>
+        </div>
+        <div class="form-group">
+          <label for="kilometres" class="px-3 py-2">Lunghezza kilometrica del viaggio desiderato</label>
+          <input type="text" class="form-control" id="kilometres" placeholder="kilometri">
+        </div>
+        <button id="button-ticket" type="submit" class="btn button-ticket my-3 mx-2">Richiedi il biglietto</button>
+        <!-- price of the ticket -->
+        <p class="py-3" id="responce">Prezzo del biglietto: €</p>
+    </form>
+
+    <!-- script javascript file link -->
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
