@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                   <label for="kilometres" class="px-3 py-2">Lunghezza kilometrica del viaggio desiderato</label>
-                  <input type="text" class="form-control" id="kilometres" placeholder="kilometri">
+                  <input type="text" class="form-control" id="kilometres" required placeholder="kilometri">
                 </div>
     
                 <div class="row">
@@ -70,7 +70,7 @@
         <div class="inner-border-bottom-radius">
             <div class="todo-bottom-container">
 
-              <table class="table">
+              <table id="my-table" class="table">
                 <thead>
                   <tr>
                     <th scope="col">Nome</th>
@@ -89,13 +89,13 @@
                     <td id="offer-ticket"></td>
                     <td id="railway-carriage"></td>
                     <td id="cp-code"></td>
-                    <td id="price"></td>
+                    <td id="price-ticket"></td>
                   </tr>
                
                 </tbody>
               </table>
 
-              <button id="button-ticket" type="submit" class="btn button-ticket my-3 mx-2">Stampa il biglietto</button>
+              <button id="print-ticket" type="submit" class="btn button-ticket my-3 mx-2">Stampa il biglietto</button>
 
     
               <!-- price of the ticket -->
