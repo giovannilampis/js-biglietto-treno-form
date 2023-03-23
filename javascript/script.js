@@ -20,6 +20,12 @@ const endOperation = document.getElementById("operation-end");
 
 const printTicket = document.getElementById("print-ticket");
 
+// Getting a random number between two values
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
 
 
 // ADD EVENT LISTENER
@@ -63,7 +69,7 @@ buttonTicket.addEventListener("click", function() {
 
     const tripKm = parseInt(kiloM.value);
 
-    // console.log(tripKm);, for
+    // console.log(tripKm);
 
 
     // the variable "priceRegular" expresses the regurar price of the ticket, for adults and non-retired persons
@@ -84,33 +90,42 @@ buttonTicket.addEventListener("click", function() {
 
     let priceRetired = priceRegular / 100 * 60;
 
-
-    // create "responcePrice", a variable that expresses a link with p in HTML: 
-
-    let responcePrice = document.getElementById("responce");
-
-
-
-
-     // create "firstNameTicket", a variable that expresses a link with the proper cell in the table: 
+    // create "firstNameTicket", a variable that expresses a link with the proper cell in the table: 
 
     let firstNameTicket = document.getElementById("first-name-ticket");
 
     firstNameTicket.innerHTML = `${firstName}`;
     
-    // create "firstNameTicket", a variable that expresses a link with the proper cell in the table: 
+    // create "lastNameTicket", a variable that expresses a link with the proper cell in the table: 
 
     let lastNameTicket = document.getElementById("last-name-ticket");
 
     lastNameTicket.innerHTML = `${lastName}`;
 
-    // create "firstNameTicket", a variable that expresses a link with the proper cell in the table: 
+    // create "priceTicket", a variable that expresses a link with the proper cell in the table: 
 
     let priceTicket = document.getElementById("price-ticket");
 
-     // create "offerTicket", a variable that expresses a link with the proper cell in the table: 
+    // create "offerTicket", a variable that expresses a link with the proper cell in the table: 
 
-     let offerTicket = document.getElementById("offer-ticket");
+    let offerTicket = document.getElementById("offer-ticket");
+
+    // create "railwayCarriage", a variable that expresses a link with the proper cell in the table: 
+
+    let railwayCarriage = document.getElementById("railway-carriage");
+
+    let numberCarriage = Math.floor(getRandomArbitrary(1, 20));
+
+    railwayCarriage.innerHTML = `${numberCarriage}`;
+
+     // create "cpCode", a variable that expresses a link with the proper cell in the table: 
+
+     let cpCode = document.getElementById("cp-code");
+
+     let numberCpCode = Math.floor(getRandomArbitrary(1, 2000));
+ 
+     cpCode.innerHTML = `${numberCpCode}`;
+ 
 
 
     if (age < 18) {
@@ -130,6 +145,9 @@ buttonTicket.addEventListener("click", function() {
     } else {
         // price of the ticket for adult, non-retired people
         priceTicket.innerHTML = `€ ${priceRegular}`;
+
+        // offer on the ticket for retired people   
+        offerTicket.innerHTML = `Regular Ticket 🚂`;
     }
 
     // event prevent default, required because of the presence of a form in the HTML file
