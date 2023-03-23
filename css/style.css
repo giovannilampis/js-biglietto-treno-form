@@ -1,11 +1,12 @@
 /* color variables */
 
 :root {
-    --body-bg: #fef6e4;
-    --form-bg: #f3d2c1;
-    --headline: #001858;
-    --paragraph: #172c66;
-    --button: #8bd3dd;
+    --body-bg: #fffffe;
+    --form-bg: #f9f4ef;
+    --headline: #020826;
+    --paragraph: #716040;
+    --button: #8c7851;
+    --button-text: #fffffe;
 }
 
 /* utilities */
@@ -17,7 +18,7 @@
 }
 
 .debug {
-    border: 1px solid red;
+    border: 2px solid red;
 }
 
 /* general */
@@ -26,12 +27,35 @@ body {
     background-color: var(--body-bg);
 }
 
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-section-container {
+    background-color: var(--pale-grey);
+    border: 3px solid var(--button);
+    border-radius: 0.4rem 0.4rem 0 0;
+    height: 3.5rem;
+}
+
+.inner-border-bottom-radius {
+    border: 1px solid var(--light-grey);
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.todo-bottom-container {
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 0.4rem;
+}
+
+
 form {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     background-color: var(--form-bg);
-    border: 1px solid var(--headline);
-    border-radius: 1rem;
+    border-radius: 0 0 1rem 1rem;
 }
 
 h1 {
@@ -45,5 +69,6 @@ p {
 
 .button-ticket {
     background-color: var(--button);
-    color: var(--headline);
+    color: var(--button-text)
 }
+

@@ -13,7 +13,7 @@ const kiloM = document.getElementById("kilometres");
 const buttonTicket = document.getElementById("button-ticket");
 
 
-// ADD EVENT LISTENER WITH A FUNCTION INSIDE
+// ADD EVENT LISTENER
 buttonTicket.addEventListener("click", function() {
     
     // the variable "birth" gets the customer's year of birth and converts it into a number
@@ -85,6 +85,7 @@ buttonTicket.addEventListener("click", function() {
         responcePrice.innerHTML += `${priceRegular}, le auguriamo uno splendido viaggio 🚞`;
     }
 
+    // event prevent default, required because of the presence of a form in the HTML file
     event.preventDefault();
 
 })
