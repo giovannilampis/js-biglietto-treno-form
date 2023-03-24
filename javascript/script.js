@@ -67,7 +67,7 @@ buttonTicket.addEventListener("click", function() {
 
     // the variable "tripKm" gets the kilometric lenght of the customer's trip and converts it into a number
 
-    const tripKm = parseInt(kiloM.value);
+    const tripKm = parseFloat(kiloM.value);
 
     // console.log(tripKm);
 
@@ -75,18 +75,19 @@ buttonTicket.addEventListener("click", function() {
     // the variable "priceRegular" expresses the regurar price of the ticket, for adults and non-retired persons
 
     let priceRegular = tripKm * 0.21;
+    
 
     // prices must have a maximum of two decimal places
 
     priceRegular = priceRegular.toFixed(2);
 
 
-     // the variable "priceUnderAge" expresses the price for underage people
+    // the variable "priceUnderAge" expresses the price for underage people
 
     let priceUnderAge = priceRegular / 100 * 80;
 
 
-     // the variable "priceRetired" expresses the price for retired people
+    // the variable "priceRetired" expresses the price for retired people
 
     let priceRetired = priceRegular / 100 * 60;
 
@@ -114,17 +115,25 @@ buttonTicket.addEventListener("click", function() {
 
     let railwayCarriage = document.getElementById("railway-carriage");
 
+    // create a random number that expresses the train carriage number
+
     let numberCarriage = Math.floor(getRandomArbitrary(1, 20));
+
+    // show the train carriage number in the ticket
 
     railwayCarriage.innerHTML = `${numberCarriage}`;
 
-     // create "cpCode", a variable that expresses a link with the proper cell in the table: 
+    // create "cpCode", a variable that expresses a link with the proper cell in the table: 
 
-     let cpCode = document.getElementById("cp-code");
+    let cpCode = document.getElementById("cp-code");
 
-     let numberCpCode = Math.floor(getRandomArbitrary(1, 2000));
+    // create a random number that expresses the cp code
+
+    let numberCpCode = Math.floor(getRandomArbitrary(1, 2000));
+
+    // show the cp code in the ticket
  
-     cpCode.innerHTML = `${numberCpCode}`;
+    cpCode.innerHTML = `${numberCpCode}`;
  
 
 
